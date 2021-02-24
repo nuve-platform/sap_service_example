@@ -304,8 +304,8 @@
     },
     "no_public_attributes": false,
     "object_naming": {
-      "clas": "^ZC(L|X)\\_ABAPGIT\\_",
-      "intf": "^ZIF\\_ABAPGIT\\_",
+      "clas": "^ZC(L|X)\\_ZTXC\\_",
+      "intf": "^ZIF\\_ZTXC\\_",
       "prog": "^ZABAPGIT",
       "fugr": "^ZABAPGIT",
       "tabl": "^Z",
