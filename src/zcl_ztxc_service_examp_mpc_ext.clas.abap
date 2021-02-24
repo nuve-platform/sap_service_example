@@ -1,11 +1,11 @@
-class ZCL_ZTXC_SERVICE_EXAMP_MPC_EXT definition
-  public
-  inheriting from ZCL_ZTXC_SERVICE_EXAMP_MPC
-  create public .
+CLASS zcl_ztxc_service_examp_mpc_ext DEFINITION
+  PUBLIC
+  INHERITING FROM zcl_ztxc_service_examp_mpc
+  CREATE PUBLIC .
 
-public section.
-protected section.
-private section.
+  PUBLIC SECTION.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
 ENDCLASS.
 
 
