@@ -23,7 +23,7 @@ protected section.
 
   data mo_injection type ref to /IWBEP/IF_SB_GEN_DPC_INJECTION .
 
-  methods CUSTOMERSET_CREATE_ENTITY
+  methods CUSTOMERSAPSTRUC_CREATE_ENTITY
     importing
       !IV_ENTITY_NAME type STRING
       !IV_ENTITY_SET_NAME type STRING
@@ -33,11 +33,11 @@ protected section.
       !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
       !IO_DATA_PROVIDER type ref to /IWBEP/IF_MGW_ENTRY_PROVIDER optional
     exporting
-      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMER
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERSAPSTRUCTURE
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
-  methods CUSTOMERSET_DELETE_ENTITY
+  methods CUSTOMERSAPSTRUC_DELETE_ENTITY
     importing
       !IV_ENTITY_NAME type STRING
       !IV_ENTITY_SET_NAME type STRING
@@ -48,7 +48,7 @@ protected section.
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
-  methods CUSTOMERSET_GET_ENTITY
+  methods CUSTOMERSAPSTRUC_GET_ENTITY
     importing
       !IV_ENTITY_NAME type STRING
       !IV_ENTITY_SET_NAME type STRING
@@ -58,12 +58,12 @@ protected section.
       !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY optional
       !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
     exporting
-      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMER
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERSAPSTRUCTURE
       !ES_RESPONSE_CONTEXT type /IWBEP/IF_MGW_APPL_SRV_RUNTIME=>TY_S_MGW_RESPONSE_ENTITY_CNTXT
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
-  methods CUSTOMERSET_GET_ENTITYSET
+  methods CUSTOMERSAPSTRUC_GET_ENTITYSET
     importing
       !IV_ENTITY_NAME type STRING
       !IV_ENTITY_SET_NAME type STRING
@@ -77,12 +77,12 @@ protected section.
       !IV_SEARCH_STRING type STRING
       !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITYSET optional
     exporting
-      !ET_ENTITYSET type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TT_CUSTOMER
+      !ET_ENTITYSET type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TT_CUSTOMERSAPSTRUCTURE
       !ES_RESPONSE_CONTEXT type /IWBEP/IF_MGW_APPL_SRV_RUNTIME=>TY_S_MGW_RESPONSE_CONTEXT
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
-  methods CUSTOMERSET_UPDATE_ENTITY
+  methods CUSTOMERSAPSTRUC_UPDATE_ENTITY
     importing
       !IV_ENTITY_NAME type STRING
       !IV_ENTITY_SET_NAME type STRING
@@ -92,11 +92,11 @@ protected section.
       !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
       !IO_DATA_PROVIDER type ref to /IWBEP/IF_MGW_ENTRY_PROVIDER optional
     exporting
-      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMER
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERSAPSTRUCTURE
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
-  methods CUSTOMER_KNA1SET_CREATE_ENTITY
+  methods CUSTOMERSAPTABLE_CREATE_ENTITY
     importing
       !IV_ENTITY_NAME type STRING
       !IV_ENTITY_SET_NAME type STRING
@@ -106,11 +106,11 @@ protected section.
       !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
       !IO_DATA_PROVIDER type ref to /IWBEP/IF_MGW_ENTRY_PROVIDER optional
     exporting
-      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMER_KNA1
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERSAPTABLE
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
-  methods CUSTOMER_KNA1SET_DELETE_ENTITY
+  methods CUSTOMERSAPTABLE_DELETE_ENTITY
     importing
       !IV_ENTITY_NAME type STRING
       !IV_ENTITY_SET_NAME type STRING
@@ -121,7 +121,7 @@ protected section.
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
-  methods CUSTOMER_KNA1SET_GET_ENTITY
+  methods CUSTOMERSAPTABLE_GET_ENTITY
     importing
       !IV_ENTITY_NAME type STRING
       !IV_ENTITY_SET_NAME type STRING
@@ -131,12 +131,12 @@ protected section.
       !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY optional
       !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
     exporting
-      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMER_KNA1
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERSAPTABLE
       !ES_RESPONSE_CONTEXT type /IWBEP/IF_MGW_APPL_SRV_RUNTIME=>TY_S_MGW_RESPONSE_ENTITY_CNTXT
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
-  methods CUSTOMER_KNA1SET_GET_ENTITYSET
+  methods CUSTOMERSAPTABLE_GET_ENTITYSET
     importing
       !IV_ENTITY_NAME type STRING
       !IV_ENTITY_SET_NAME type STRING
@@ -150,12 +150,12 @@ protected section.
       !IV_SEARCH_STRING type STRING
       !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITYSET optional
     exporting
-      !ET_ENTITYSET type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TT_CUSTOMER_KNA1
+      !ET_ENTITYSET type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TT_CUSTOMERSAPTABLE
       !ES_RESPONSE_CONTEXT type /IWBEP/IF_MGW_APPL_SRV_RUNTIME=>TY_S_MGW_RESPONSE_CONTEXT
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
-  methods CUSTOMER_KNA1SET_UPDATE_ENTITY
+  methods CUSTOMERSAPTABLE_UPDATE_ENTITY
     importing
       !IV_ENTITY_NAME type STRING
       !IV_ENTITY_SET_NAME type STRING
@@ -165,7 +165,153 @@ protected section.
       !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
       !IO_DATA_PROVIDER type ref to /IWBEP/IF_MGW_ENTRY_PROVIDER optional
     exporting
-      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMER_KNA1
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERSAPTABLE
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION
+      /IWBEP/CX_MGW_TECH_EXCEPTION .
+  methods CUSTOMERZSTRUCTU_CREATE_ENTITY
+    importing
+      !IV_ENTITY_NAME type STRING
+      !IV_ENTITY_SET_NAME type STRING
+      !IV_SOURCE_NAME type STRING
+      !IT_KEY_TAB type /IWBEP/T_MGW_NAME_VALUE_PAIR
+      !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY_C optional
+      !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
+      !IO_DATA_PROVIDER type ref to /IWBEP/IF_MGW_ENTRY_PROVIDER optional
+    exporting
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERZSTRUCTURE
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION
+      /IWBEP/CX_MGW_TECH_EXCEPTION .
+  methods CUSTOMERZSTRUCTU_DELETE_ENTITY
+    importing
+      !IV_ENTITY_NAME type STRING
+      !IV_ENTITY_SET_NAME type STRING
+      !IV_SOURCE_NAME type STRING
+      !IT_KEY_TAB type /IWBEP/T_MGW_NAME_VALUE_PAIR
+      !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY_D optional
+      !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION
+      /IWBEP/CX_MGW_TECH_EXCEPTION .
+  methods CUSTOMERZSTRUCTU_GET_ENTITY
+    importing
+      !IV_ENTITY_NAME type STRING
+      !IV_ENTITY_SET_NAME type STRING
+      !IV_SOURCE_NAME type STRING
+      !IT_KEY_TAB type /IWBEP/T_MGW_NAME_VALUE_PAIR
+      !IO_REQUEST_OBJECT type ref to /IWBEP/IF_MGW_REQ_ENTITY optional
+      !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY optional
+      !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
+    exporting
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERZSTRUCTURE
+      !ES_RESPONSE_CONTEXT type /IWBEP/IF_MGW_APPL_SRV_RUNTIME=>TY_S_MGW_RESPONSE_ENTITY_CNTXT
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION
+      /IWBEP/CX_MGW_TECH_EXCEPTION .
+  methods CUSTOMERZSTRUCTU_GET_ENTITYSET
+    importing
+      !IV_ENTITY_NAME type STRING
+      !IV_ENTITY_SET_NAME type STRING
+      !IV_SOURCE_NAME type STRING
+      !IT_FILTER_SELECT_OPTIONS type /IWBEP/T_MGW_SELECT_OPTION
+      !IS_PAGING type /IWBEP/S_MGW_PAGING
+      !IT_KEY_TAB type /IWBEP/T_MGW_NAME_VALUE_PAIR
+      !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
+      !IT_ORDER type /IWBEP/T_MGW_SORTING_ORDER
+      !IV_FILTER_STRING type STRING
+      !IV_SEARCH_STRING type STRING
+      !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITYSET optional
+    exporting
+      !ET_ENTITYSET type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TT_CUSTOMERZSTRUCTURE
+      !ES_RESPONSE_CONTEXT type /IWBEP/IF_MGW_APPL_SRV_RUNTIME=>TY_S_MGW_RESPONSE_CONTEXT
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION
+      /IWBEP/CX_MGW_TECH_EXCEPTION .
+  methods CUSTOMERZSTRUCTU_UPDATE_ENTITY
+    importing
+      !IV_ENTITY_NAME type STRING
+      !IV_ENTITY_SET_NAME type STRING
+      !IV_SOURCE_NAME type STRING
+      !IT_KEY_TAB type /IWBEP/T_MGW_NAME_VALUE_PAIR
+      !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY_U optional
+      !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
+      !IO_DATA_PROVIDER type ref to /IWBEP/IF_MGW_ENTRY_PROVIDER optional
+    exporting
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERZSTRUCTURE
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION
+      /IWBEP/CX_MGW_TECH_EXCEPTION .
+  methods CUSTOMERZTABLESE_CREATE_ENTITY
+    importing
+      !IV_ENTITY_NAME type STRING
+      !IV_ENTITY_SET_NAME type STRING
+      !IV_SOURCE_NAME type STRING
+      !IT_KEY_TAB type /IWBEP/T_MGW_NAME_VALUE_PAIR
+      !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY_C optional
+      !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
+      !IO_DATA_PROVIDER type ref to /IWBEP/IF_MGW_ENTRY_PROVIDER optional
+    exporting
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERZTABLE
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION
+      /IWBEP/CX_MGW_TECH_EXCEPTION .
+  methods CUSTOMERZTABLESE_DELETE_ENTITY
+    importing
+      !IV_ENTITY_NAME type STRING
+      !IV_ENTITY_SET_NAME type STRING
+      !IV_SOURCE_NAME type STRING
+      !IT_KEY_TAB type /IWBEP/T_MGW_NAME_VALUE_PAIR
+      !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY_D optional
+      !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION
+      /IWBEP/CX_MGW_TECH_EXCEPTION .
+  methods CUSTOMERZTABLESE_GET_ENTITY
+    importing
+      !IV_ENTITY_NAME type STRING
+      !IV_ENTITY_SET_NAME type STRING
+      !IV_SOURCE_NAME type STRING
+      !IT_KEY_TAB type /IWBEP/T_MGW_NAME_VALUE_PAIR
+      !IO_REQUEST_OBJECT type ref to /IWBEP/IF_MGW_REQ_ENTITY optional
+      !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY optional
+      !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
+    exporting
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERZTABLE
+      !ES_RESPONSE_CONTEXT type /IWBEP/IF_MGW_APPL_SRV_RUNTIME=>TY_S_MGW_RESPONSE_ENTITY_CNTXT
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION
+      /IWBEP/CX_MGW_TECH_EXCEPTION .
+  methods CUSTOMERZTABLESE_GET_ENTITYSET
+    importing
+      !IV_ENTITY_NAME type STRING
+      !IV_ENTITY_SET_NAME type STRING
+      !IV_SOURCE_NAME type STRING
+      !IT_FILTER_SELECT_OPTIONS type /IWBEP/T_MGW_SELECT_OPTION
+      !IS_PAGING type /IWBEP/S_MGW_PAGING
+      !IT_KEY_TAB type /IWBEP/T_MGW_NAME_VALUE_PAIR
+      !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
+      !IT_ORDER type /IWBEP/T_MGW_SORTING_ORDER
+      !IV_FILTER_STRING type STRING
+      !IV_SEARCH_STRING type STRING
+      !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITYSET optional
+    exporting
+      !ET_ENTITYSET type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TT_CUSTOMERZTABLE
+      !ES_RESPONSE_CONTEXT type /IWBEP/IF_MGW_APPL_SRV_RUNTIME=>TY_S_MGW_RESPONSE_CONTEXT
+    raising
+      /IWBEP/CX_MGW_BUSI_EXCEPTION
+      /IWBEP/CX_MGW_TECH_EXCEPTION .
+  methods CUSTOMERZTABLESE_UPDATE_ENTITY
+    importing
+      !IV_ENTITY_NAME type STRING
+      !IV_ENTITY_SET_NAME type STRING
+      !IV_SOURCE_NAME type STRING
+      !IT_KEY_TAB type /IWBEP/T_MGW_NAME_VALUE_PAIR
+      !IO_TECH_REQUEST_CONTEXT type ref to /IWBEP/IF_MGW_REQ_ENTITY_U optional
+      !IT_NAVIGATION_PATH type /IWBEP/T_MGW_NAVIGATION_PATH
+      !IO_DATA_PROVIDER type ref to /IWBEP/IF_MGW_ENTRY_PROVIDER optional
+    exporting
+      !ER_ENTITY type ZCL_ZTXC_SERVICE_EXAMP_MPC=>TS_CUSTOMERZTABLE
     raising
       /IWBEP/CX_MGW_BUSI_EXCEPTION
       /IWBEP/CX_MGW_TECH_EXCEPTION .
@@ -183,26 +329,28 @@ CLASS ZCL_ZTXC_SERVICE_EXAMP_DPC IMPLEMENTATION.
   method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~CREATE_ENTITY.
 *&----------------------------------------------------------------------------------------------*
 *&  Include           /IWBEP/DPC_TEMP_CRT_ENTITY_BASE
-*&* This class has been generated on 02/24/2021 21:47:28 in client 100
+*&* This class has been generated on 02/25/2021 04:39:11 in client 100
 *&*
 *&*       WARNING--> NEVER MODIFY THIS CLASS <--WARNING
 *&*   If you want to change the DPC implementation, use the
 *&*   generated methods inside the DPC provider subclass - ZCL_ZTXC_SERVICE_EXAMP_DPC_EXT
 *&-----------------------------------------------------------------------------------------------*
 
- DATA customerset_create_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customer.
- DATA customer_kna1set_create_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customer_kna1.
+ DATA customerzstructu_create_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customerzstructure.
+ DATA customerztablese_create_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customerztable.
+ DATA customersaptable_create_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customersaptable.
+ DATA customersapstruc_create_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customersapstructure.
  DATA lv_entityset_name TYPE string.
 
 lv_entityset_name = io_tech_request_context->get_entity_set_name( ).
 
 CASE lv_entityset_name.
 *-------------------------------------------------------------------------*
-*             EntitySet -  customerSet
+*             EntitySet -  CustomerZStructureSet
 *-------------------------------------------------------------------------*
-     WHEN 'customerSet'.
+     WHEN 'CustomerZStructureSet'.
 *     Call the entity set generated method
-    customerset_create_entity(
+    customerzstructu_create_entity(
          EXPORTING iv_entity_name     = iv_entity_name
                    iv_entity_set_name = iv_entity_set_name
                    iv_source_name     = iv_source_name
@@ -210,22 +358,22 @@ CASE lv_entityset_name.
                    it_key_tab         = it_key_tab
                    it_navigation_path = it_navigation_path
                    io_tech_request_context = io_tech_request_context
-       	 IMPORTING er_entity          = customerset_create_entity
+       	 IMPORTING er_entity          = customerzstructu_create_entity
     ).
 *     Send specific entity data to the caller interfaces
     copy_data_to_ref(
       EXPORTING
-        is_data = customerset_create_entity
+        is_data = customerzstructu_create_entity
       CHANGING
         cr_data = er_entity
    ).
 
 *-------------------------------------------------------------------------*
-*             EntitySet -  customer_kna1Set
+*             EntitySet -  CustomerZTableSet
 *-------------------------------------------------------------------------*
-     WHEN 'customer_kna1Set'.
+     WHEN 'CustomerZTableSet'.
 *     Call the entity set generated method
-    customer_kna1set_create_entity(
+    customerztablese_create_entity(
          EXPORTING iv_entity_name     = iv_entity_name
                    iv_entity_set_name = iv_entity_set_name
                    iv_source_name     = iv_source_name
@@ -233,12 +381,58 @@ CASE lv_entityset_name.
                    it_key_tab         = it_key_tab
                    it_navigation_path = it_navigation_path
                    io_tech_request_context = io_tech_request_context
-       	 IMPORTING er_entity          = customer_kna1set_create_entity
+       	 IMPORTING er_entity          = customerztablese_create_entity
     ).
 *     Send specific entity data to the caller interfaces
     copy_data_to_ref(
       EXPORTING
-        is_data = customer_kna1set_create_entity
+        is_data = customerztablese_create_entity
+      CHANGING
+        cr_data = er_entity
+   ).
+
+*-------------------------------------------------------------------------*
+*             EntitySet -  CustomerSapTableSet
+*-------------------------------------------------------------------------*
+     WHEN 'CustomerSapTableSet'.
+*     Call the entity set generated method
+    customersaptable_create_entity(
+         EXPORTING iv_entity_name     = iv_entity_name
+                   iv_entity_set_name = iv_entity_set_name
+                   iv_source_name     = iv_source_name
+                   io_data_provider   = io_data_provider
+                   it_key_tab         = it_key_tab
+                   it_navigation_path = it_navigation_path
+                   io_tech_request_context = io_tech_request_context
+       	 IMPORTING er_entity          = customersaptable_create_entity
+    ).
+*     Send specific entity data to the caller interfaces
+    copy_data_to_ref(
+      EXPORTING
+        is_data = customersaptable_create_entity
+      CHANGING
+        cr_data = er_entity
+   ).
+
+*-------------------------------------------------------------------------*
+*             EntitySet -  CustomerSapStructureSet
+*-------------------------------------------------------------------------*
+     WHEN 'CustomerSapStructureSet'.
+*     Call the entity set generated method
+    customersapstruc_create_entity(
+         EXPORTING iv_entity_name     = iv_entity_name
+                   iv_entity_set_name = iv_entity_set_name
+                   iv_source_name     = iv_source_name
+                   io_data_provider   = io_data_provider
+                   it_key_tab         = it_key_tab
+                   it_navigation_path = it_navigation_path
+                   io_tech_request_context = io_tech_request_context
+       	 IMPORTING er_entity          = customersapstruc_create_entity
+    ).
+*     Send specific entity data to the caller interfaces
+    copy_data_to_ref(
+      EXPORTING
+        is_data = customersapstruc_create_entity
       CHANGING
         cr_data = er_entity
    ).
@@ -262,7 +456,7 @@ ENDCASE.
   method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~DELETE_ENTITY.
 *&----------------------------------------------------------------------------------------------*
 *&  Include           /IWBEP/DPC_TEMP_DEL_ENTITY_BASE
-*&* This class has been generated on 02/24/2021 21:47:28 in client 100
+*&* This class has been generated on 02/25/2021 04:39:11 in client 100
 *&*
 *&*       WARNING--> NEVER MODIFY THIS CLASS <--WARNING
 *&*   If you want to change the DPC implementation, use the
@@ -275,11 +469,11 @@ lv_entityset_name = io_tech_request_context->get_entity_set_name( ).
 
 CASE lv_entityset_name.
 *-------------------------------------------------------------------------*
-*             EntitySet -  customerSet
+*             EntitySet -  CustomerZStructureSet
 *-------------------------------------------------------------------------*
-      when 'customerSet'.
+      when 'CustomerZStructureSet'.
 *     Call the entity set generated method
-     customerset_delete_entity(
+     customerzstructu_delete_entity(
           EXPORTING iv_entity_name     = iv_entity_name
                     iv_entity_set_name = iv_entity_set_name
                     iv_source_name     = iv_source_name
@@ -289,11 +483,39 @@ CASE lv_entityset_name.
      ).
 
 *-------------------------------------------------------------------------*
-*             EntitySet -  customer_kna1Set
+*             EntitySet -  CustomerZTableSet
 *-------------------------------------------------------------------------*
-      when 'customer_kna1Set'.
+      when 'CustomerZTableSet'.
 *     Call the entity set generated method
-     customer_kna1set_delete_entity(
+     customerztablese_delete_entity(
+          EXPORTING iv_entity_name     = iv_entity_name
+                    iv_entity_set_name = iv_entity_set_name
+                    iv_source_name     = iv_source_name
+                    it_key_tab         = it_key_tab
+                    it_navigation_path = it_navigation_path
+                    io_tech_request_context = io_tech_request_context
+     ).
+
+*-------------------------------------------------------------------------*
+*             EntitySet -  CustomerSapTableSet
+*-------------------------------------------------------------------------*
+      when 'CustomerSapTableSet'.
+*     Call the entity set generated method
+     customersaptable_delete_entity(
+          EXPORTING iv_entity_name     = iv_entity_name
+                    iv_entity_set_name = iv_entity_set_name
+                    iv_source_name     = iv_source_name
+                    it_key_tab         = it_key_tab
+                    it_navigation_path = it_navigation_path
+                    io_tech_request_context = io_tech_request_context
+     ).
+
+*-------------------------------------------------------------------------*
+*             EntitySet -  CustomerSapStructureSet
+*-------------------------------------------------------------------------*
+      when 'CustomerSapStructureSet'.
+*     Call the entity set generated method
+     customersapstruc_delete_entity(
           EXPORTING iv_entity_name     = iv_entity_name
                     iv_entity_set_name = iv_entity_set_name
                     iv_source_name     = iv_source_name
@@ -318,15 +540,17 @@ CASE lv_entityset_name.
   method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~GET_ENTITY.
 *&-----------------------------------------------------------------------------------------------*
 *&  Include           /IWBEP/DPC_TEMP_GETENTITY_BASE
-*&* This class has been generated  on 02/24/2021 21:47:28 in client 100
+*&* This class has been generated  on 02/25/2021 04:39:11 in client 100
 *&*
 *&*       WARNING--> NEVER MODIFY THIS CLASS <--WARNING
 *&*   If you want to change the DPC implementation, use the
 *&*   generated methods inside the DPC provider subclass - ZCL_ZTXC_SERVICE_EXAMP_DPC_EXT
 *&-----------------------------------------------------------------------------------------------*
 
- DATA customerset_get_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customer.
- DATA customer_kna1set_get_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customer_kna1.
+ DATA customerzstructu_get_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customerzstructure.
+ DATA customerztablese_get_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customerztable.
+ DATA customersaptable_get_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customersaptable.
+ DATA customersapstruc_get_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customersapstructure.
  DATA lv_entityset_name TYPE string.
  DATA lr_entity TYPE REF TO data.
 
@@ -334,26 +558,26 @@ lv_entityset_name = io_tech_request_context->get_entity_set_name( ).
 
 CASE lv_entityset_name.
 *-------------------------------------------------------------------------*
-*             EntitySet -  customerSet
+*             EntitySet -  CustomerZStructureSet
 *-------------------------------------------------------------------------*
-      WHEN 'customerSet'.
+      WHEN 'CustomerZStructureSet'.
 *     Call the entity set generated method
-          customerset_get_entity(
+          customerzstructu_get_entity(
                EXPORTING iv_entity_name     = iv_entity_name
                          iv_entity_set_name = iv_entity_set_name
                          iv_source_name     = iv_source_name
                          it_key_tab         = it_key_tab
                          it_navigation_path = it_navigation_path
                          io_tech_request_context = io_tech_request_context
-             	 IMPORTING er_entity          = customerset_get_entity
+             	 IMPORTING er_entity          = customerzstructu_get_entity
                          es_response_context = es_response_context
           ).
 
-        IF customerset_get_entity IS NOT INITIAL.
+        IF customerzstructu_get_entity IS NOT INITIAL.
 *     Send specific entity data to the caller interface
           copy_data_to_ref(
             EXPORTING
-              is_data = customerset_get_entity
+              is_data = customerzstructu_get_entity
             CHANGING
               cr_data = er_entity
           ).
@@ -362,26 +586,82 @@ CASE lv_entityset_name.
           er_entity = lr_entity.
         ENDIF.
 *-------------------------------------------------------------------------*
-*             EntitySet -  customer_kna1Set
+*             EntitySet -  CustomerZTableSet
 *-------------------------------------------------------------------------*
-      WHEN 'customer_kna1Set'.
+      WHEN 'CustomerZTableSet'.
 *     Call the entity set generated method
-          customer_kna1set_get_entity(
+          customerztablese_get_entity(
                EXPORTING iv_entity_name     = iv_entity_name
                          iv_entity_set_name = iv_entity_set_name
                          iv_source_name     = iv_source_name
                          it_key_tab         = it_key_tab
                          it_navigation_path = it_navigation_path
                          io_tech_request_context = io_tech_request_context
-             	 IMPORTING er_entity          = customer_kna1set_get_entity
+             	 IMPORTING er_entity          = customerztablese_get_entity
                          es_response_context = es_response_context
           ).
 
-        IF customer_kna1set_get_entity IS NOT INITIAL.
+        IF customerztablese_get_entity IS NOT INITIAL.
 *     Send specific entity data to the caller interface
           copy_data_to_ref(
             EXPORTING
-              is_data = customer_kna1set_get_entity
+              is_data = customerztablese_get_entity
+            CHANGING
+              cr_data = er_entity
+          ).
+        ELSE.
+*         In case of initial values - unbind the entity reference
+          er_entity = lr_entity.
+        ENDIF.
+*-------------------------------------------------------------------------*
+*             EntitySet -  CustomerSapTableSet
+*-------------------------------------------------------------------------*
+      WHEN 'CustomerSapTableSet'.
+*     Call the entity set generated method
+          customersaptable_get_entity(
+               EXPORTING iv_entity_name     = iv_entity_name
+                         iv_entity_set_name = iv_entity_set_name
+                         iv_source_name     = iv_source_name
+                         it_key_tab         = it_key_tab
+                         it_navigation_path = it_navigation_path
+                         io_tech_request_context = io_tech_request_context
+             	 IMPORTING er_entity          = customersaptable_get_entity
+                         es_response_context = es_response_context
+          ).
+
+        IF customersaptable_get_entity IS NOT INITIAL.
+*     Send specific entity data to the caller interface
+          copy_data_to_ref(
+            EXPORTING
+              is_data = customersaptable_get_entity
+            CHANGING
+              cr_data = er_entity
+          ).
+        ELSE.
+*         In case of initial values - unbind the entity reference
+          er_entity = lr_entity.
+        ENDIF.
+*-------------------------------------------------------------------------*
+*             EntitySet -  CustomerSapStructureSet
+*-------------------------------------------------------------------------*
+      WHEN 'CustomerSapStructureSet'.
+*     Call the entity set generated method
+          customersapstruc_get_entity(
+               EXPORTING iv_entity_name     = iv_entity_name
+                         iv_entity_set_name = iv_entity_set_name
+                         iv_source_name     = iv_source_name
+                         it_key_tab         = it_key_tab
+                         it_navigation_path = it_navigation_path
+                         io_tech_request_context = io_tech_request_context
+             	 IMPORTING er_entity          = customersapstruc_get_entity
+                         es_response_context = es_response_context
+          ).
+
+        IF customersapstruc_get_entity IS NOT INITIAL.
+*     Send specific entity data to the caller interface
+          copy_data_to_ref(
+            EXPORTING
+              is_data = customersapstruc_get_entity
             CHANGING
               cr_data = er_entity
           ).
@@ -408,25 +688,27 @@ CASE lv_entityset_name.
   method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~GET_ENTITYSET.
 *&----------------------------------------------------------------------------------------------*
 *&  Include           /IWBEP/DPC_TMP_ENTITYSET_BASE
-*&* This class has been generated on 02/24/2021 21:47:28 in client 100
+*&* This class has been generated on 02/25/2021 04:39:11 in client 100
 *&*
 *&*       WARNING--> NEVER MODIFY THIS CLASS <--WARNING
 *&*   If you want to change the DPC implementation, use the
 *&*   generated methods inside the DPC provider subclass - ZCL_ZTXC_SERVICE_EXAMP_DPC_EXT
 *&-----------------------------------------------------------------------------------------------*
- DATA customerset_get_entityset TYPE zcl_ztxc_service_examp_mpc=>tt_customer.
- DATA customer_kna1set_get_entityset TYPE zcl_ztxc_service_examp_mpc=>tt_customer_kna1.
+ DATA customerzstructu_get_entityset TYPE zcl_ztxc_service_examp_mpc=>tt_customerzstructure.
+ DATA customerztablese_get_entityset TYPE zcl_ztxc_service_examp_mpc=>tt_customerztable.
+ DATA customersaptable_get_entityset TYPE zcl_ztxc_service_examp_mpc=>tt_customersaptable.
+ DATA customersapstruc_get_entityset TYPE zcl_ztxc_service_examp_mpc=>tt_customersapstructure.
  DATA lv_entityset_name TYPE string.
 
 lv_entityset_name = io_tech_request_context->get_entity_set_name( ).
 
 CASE lv_entityset_name.
 *-------------------------------------------------------------------------*
-*             EntitySet -  customerSet
+*             EntitySet -  CustomerZStructureSet
 *-------------------------------------------------------------------------*
-   WHEN 'customerSet'.
+   WHEN 'CustomerZStructureSet'.
 *     Call the entity set generated method
-      customerset_get_entityset(
+      customerzstructu_get_entityset(
         EXPORTING
          iv_entity_name = iv_entity_name
          iv_entity_set_name = iv_entity_set_name
@@ -440,23 +722,23 @@ CASE lv_entityset_name.
          iv_search_string = iv_search_string
          io_tech_request_context = io_tech_request_context
        IMPORTING
-         et_entityset = customerset_get_entityset
+         et_entityset = customerzstructu_get_entityset
          es_response_context = es_response_context
        ).
 *     Send specific entity data to the caller interface
       copy_data_to_ref(
         EXPORTING
-          is_data = customerset_get_entityset
+          is_data = customerzstructu_get_entityset
         CHANGING
           cr_data = er_entityset
       ).
 
 *-------------------------------------------------------------------------*
-*             EntitySet -  customer_kna1Set
+*             EntitySet -  CustomerZTableSet
 *-------------------------------------------------------------------------*
-   WHEN 'customer_kna1Set'.
+   WHEN 'CustomerZTableSet'.
 *     Call the entity set generated method
-      customer_kna1set_get_entityset(
+      customerztablese_get_entityset(
         EXPORTING
          iv_entity_name = iv_entity_name
          iv_entity_set_name = iv_entity_set_name
@@ -470,13 +752,73 @@ CASE lv_entityset_name.
          iv_search_string = iv_search_string
          io_tech_request_context = io_tech_request_context
        IMPORTING
-         et_entityset = customer_kna1set_get_entityset
+         et_entityset = customerztablese_get_entityset
          es_response_context = es_response_context
        ).
 *     Send specific entity data to the caller interface
       copy_data_to_ref(
         EXPORTING
-          is_data = customer_kna1set_get_entityset
+          is_data = customerztablese_get_entityset
+        CHANGING
+          cr_data = er_entityset
+      ).
+
+*-------------------------------------------------------------------------*
+*             EntitySet -  CustomerSapTableSet
+*-------------------------------------------------------------------------*
+   WHEN 'CustomerSapTableSet'.
+*     Call the entity set generated method
+      customersaptable_get_entityset(
+        EXPORTING
+         iv_entity_name = iv_entity_name
+         iv_entity_set_name = iv_entity_set_name
+         iv_source_name = iv_source_name
+         it_filter_select_options = it_filter_select_options
+         it_order = it_order
+         is_paging = is_paging
+         it_navigation_path = it_navigation_path
+         it_key_tab = it_key_tab
+         iv_filter_string = iv_filter_string
+         iv_search_string = iv_search_string
+         io_tech_request_context = io_tech_request_context
+       IMPORTING
+         et_entityset = customersaptable_get_entityset
+         es_response_context = es_response_context
+       ).
+*     Send specific entity data to the caller interface
+      copy_data_to_ref(
+        EXPORTING
+          is_data = customersaptable_get_entityset
+        CHANGING
+          cr_data = er_entityset
+      ).
+
+*-------------------------------------------------------------------------*
+*             EntitySet -  CustomerSapStructureSet
+*-------------------------------------------------------------------------*
+   WHEN 'CustomerSapStructureSet'.
+*     Call the entity set generated method
+      customersapstruc_get_entityset(
+        EXPORTING
+         iv_entity_name = iv_entity_name
+         iv_entity_set_name = iv_entity_set_name
+         iv_source_name = iv_source_name
+         it_filter_select_options = it_filter_select_options
+         it_order = it_order
+         is_paging = is_paging
+         it_navigation_path = it_navigation_path
+         it_key_tab = it_key_tab
+         iv_filter_string = iv_filter_string
+         iv_search_string = iv_search_string
+         io_tech_request_context = io_tech_request_context
+       IMPORTING
+         et_entityset = customersapstruc_get_entityset
+         es_response_context = es_response_context
+       ).
+*     Send specific entity data to the caller interface
+      copy_data_to_ref(
+        EXPORTING
+          is_data = customersapstruc_get_entityset
         CHANGING
           cr_data = er_entityset
       ).
@@ -504,15 +846,17 @@ CASE lv_entityset_name.
   method /IWBEP/IF_MGW_APPL_SRV_RUNTIME~UPDATE_ENTITY.
 *&----------------------------------------------------------------------------------------------*
 *&  Include           /IWBEP/DPC_TEMP_UPD_ENTITY_BASE
-*&* This class has been generated on 02/24/2021 21:47:28 in client 100
+*&* This class has been generated on 02/25/2021 04:39:11 in client 100
 *&*
 *&*       WARNING--> NEVER MODIFY THIS CLASS <--WARNING
 *&*   If you want to change the DPC implementation, use the
 *&*   generated methods inside the DPC provider subclass - ZCL_ZTXC_SERVICE_EXAMP_DPC_EXT
 *&-----------------------------------------------------------------------------------------------*
 
- DATA customerset_update_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customer.
- DATA customer_kna1set_update_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customer_kna1.
+ DATA customerzstructu_update_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customerzstructure.
+ DATA customerztablese_update_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customerztable.
+ DATA customersaptable_update_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customersaptable.
+ DATA customersapstruc_update_entity TYPE zcl_ztxc_service_examp_mpc=>ts_customersapstructure.
  DATA lv_entityset_name TYPE string.
  DATA lr_entity TYPE REF TO data.
 
@@ -520,11 +864,11 @@ lv_entityset_name = io_tech_request_context->get_entity_set_name( ).
 
 CASE lv_entityset_name.
 *-------------------------------------------------------------------------*
-*             EntitySet -  customerSet
+*             EntitySet -  CustomerZStructureSet
 *-------------------------------------------------------------------------*
-      WHEN 'customerSet'.
+      WHEN 'CustomerZStructureSet'.
 *     Call the entity set generated method
-          customerset_update_entity(
+          customerzstructu_update_entity(
                EXPORTING iv_entity_name     = iv_entity_name
                          iv_entity_set_name = iv_entity_set_name
                          iv_source_name     = iv_source_name
@@ -532,13 +876,13 @@ CASE lv_entityset_name.
                          it_key_tab         = it_key_tab
                          it_navigation_path = it_navigation_path
                          io_tech_request_context = io_tech_request_context
-             	 IMPORTING er_entity          = customerset_update_entity
+             	 IMPORTING er_entity          = customerzstructu_update_entity
           ).
-       IF customerset_update_entity IS NOT INITIAL.
+       IF customerzstructu_update_entity IS NOT INITIAL.
 *     Send specific entity data to the caller interface
           copy_data_to_ref(
             EXPORTING
-              is_data = customerset_update_entity
+              is_data = customerzstructu_update_entity
             CHANGING
               cr_data = er_entity
           ).
@@ -547,11 +891,11 @@ CASE lv_entityset_name.
           er_entity = lr_entity.
         ENDIF.
 *-------------------------------------------------------------------------*
-*             EntitySet -  customer_kna1Set
+*             EntitySet -  CustomerZTableSet
 *-------------------------------------------------------------------------*
-      WHEN 'customer_kna1Set'.
+      WHEN 'CustomerZTableSet'.
 *     Call the entity set generated method
-          customer_kna1set_update_entity(
+          customerztablese_update_entity(
                EXPORTING iv_entity_name     = iv_entity_name
                          iv_entity_set_name = iv_entity_set_name
                          iv_source_name     = iv_source_name
@@ -559,13 +903,67 @@ CASE lv_entityset_name.
                          it_key_tab         = it_key_tab
                          it_navigation_path = it_navigation_path
                          io_tech_request_context = io_tech_request_context
-             	 IMPORTING er_entity          = customer_kna1set_update_entity
+             	 IMPORTING er_entity          = customerztablese_update_entity
           ).
-       IF customer_kna1set_update_entity IS NOT INITIAL.
+       IF customerztablese_update_entity IS NOT INITIAL.
 *     Send specific entity data to the caller interface
           copy_data_to_ref(
             EXPORTING
-              is_data = customer_kna1set_update_entity
+              is_data = customerztablese_update_entity
+            CHANGING
+              cr_data = er_entity
+          ).
+        ELSE.
+*         In case of initial values - unbind the entity reference
+          er_entity = lr_entity.
+        ENDIF.
+*-------------------------------------------------------------------------*
+*             EntitySet -  CustomerSapTableSet
+*-------------------------------------------------------------------------*
+      WHEN 'CustomerSapTableSet'.
+*     Call the entity set generated method
+          customersaptable_update_entity(
+               EXPORTING iv_entity_name     = iv_entity_name
+                         iv_entity_set_name = iv_entity_set_name
+                         iv_source_name     = iv_source_name
+                         io_data_provider   = io_data_provider
+                         it_key_tab         = it_key_tab
+                         it_navigation_path = it_navigation_path
+                         io_tech_request_context = io_tech_request_context
+             	 IMPORTING er_entity          = customersaptable_update_entity
+          ).
+       IF customersaptable_update_entity IS NOT INITIAL.
+*     Send specific entity data to the caller interface
+          copy_data_to_ref(
+            EXPORTING
+              is_data = customersaptable_update_entity
+            CHANGING
+              cr_data = er_entity
+          ).
+        ELSE.
+*         In case of initial values - unbind the entity reference
+          er_entity = lr_entity.
+        ENDIF.
+*-------------------------------------------------------------------------*
+*             EntitySet -  CustomerSapStructureSet
+*-------------------------------------------------------------------------*
+      WHEN 'CustomerSapStructureSet'.
+*     Call the entity set generated method
+          customersapstruc_update_entity(
+               EXPORTING iv_entity_name     = iv_entity_name
+                         iv_entity_set_name = iv_entity_set_name
+                         iv_source_name     = iv_source_name
+                         io_data_provider   = io_data_provider
+                         it_key_tab         = it_key_tab
+                         it_navigation_path = it_navigation_path
+                         io_tech_request_context = io_tech_request_context
+             	 IMPORTING er_entity          = customersapstruc_update_entity
+          ).
+       IF customersapstruc_update_entity IS NOT INITIAL.
+*     Send specific entity data to the caller interface
+          copy_data_to_ref(
+            EXPORTING
+              is_data = customersapstruc_update_entity
             CHANGING
               cr_data = er_entity
           ).
@@ -709,82 +1107,162 @@ lo_logger = /iwbep/if_mgw_conv_srv_runtime~get_logger( ).
   endmethod.
 
 
-  method CUSTOMERSET_CREATE_ENTITY.
+  method CUSTOMERSAPSTRUC_CREATE_ENTITY.
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
-      method = 'CUSTOMERSET_CREATE_ENTITY'.
+      method = 'CUSTOMERSAPSTRUC_CREATE_ENTITY'.
   endmethod.
 
 
-  method CUSTOMERSET_DELETE_ENTITY.
+  method CUSTOMERSAPSTRUC_DELETE_ENTITY.
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
-      method = 'CUSTOMERSET_DELETE_ENTITY'.
+      method = 'CUSTOMERSAPSTRUC_DELETE_ENTITY'.
   endmethod.
 
 
-  method CUSTOMERSET_GET_ENTITY.
+  method CUSTOMERSAPSTRUC_GET_ENTITY.
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
-      method = 'CUSTOMERSET_GET_ENTITY'.
+      method = 'CUSTOMERSAPSTRUC_GET_ENTITY'.
   endmethod.
 
 
-  method CUSTOMERSET_GET_ENTITYSET.
+  method CUSTOMERSAPSTRUC_GET_ENTITYSET.
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
-      method = 'CUSTOMERSET_GET_ENTITYSET'.
+      method = 'CUSTOMERSAPSTRUC_GET_ENTITYSET'.
   endmethod.
 
 
-  method CUSTOMERSET_UPDATE_ENTITY.
+  method CUSTOMERSAPSTRUC_UPDATE_ENTITY.
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
-      method = 'CUSTOMERSET_UPDATE_ENTITY'.
+      method = 'CUSTOMERSAPSTRUC_UPDATE_ENTITY'.
   endmethod.
 
 
-  method CUSTOMER_KNA1SET_CREATE_ENTITY.
+  method CUSTOMERSAPTABLE_CREATE_ENTITY.
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
-      method = 'CUSTOMER_KNA1SET_CREATE_ENTITY'.
+      method = 'CUSTOMERSAPTABLE_CREATE_ENTITY'.
   endmethod.
 
 
-  method CUSTOMER_KNA1SET_DELETE_ENTITY.
+  method CUSTOMERSAPTABLE_DELETE_ENTITY.
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
-      method = 'CUSTOMER_KNA1SET_DELETE_ENTITY'.
+      method = 'CUSTOMERSAPTABLE_DELETE_ENTITY'.
   endmethod.
 
 
-  method CUSTOMER_KNA1SET_GET_ENTITY.
+  method CUSTOMERSAPTABLE_GET_ENTITY.
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
-      method = 'CUSTOMER_KNA1SET_GET_ENTITY'.
+      method = 'CUSTOMERSAPTABLE_GET_ENTITY'.
   endmethod.
 
 
-  method CUSTOMER_KNA1SET_GET_ENTITYSET.
+  method CUSTOMERSAPTABLE_GET_ENTITYSET.
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
-      method = 'CUSTOMER_KNA1SET_GET_ENTITYSET'.
+      method = 'CUSTOMERSAPTABLE_GET_ENTITYSET'.
   endmethod.
 
 
-  method CUSTOMER_KNA1SET_UPDATE_ENTITY.
+  method CUSTOMERSAPTABLE_UPDATE_ENTITY.
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
-      method = 'CUSTOMER_KNA1SET_UPDATE_ENTITY'.
+      method = 'CUSTOMERSAPTABLE_UPDATE_ENTITY'.
+  endmethod.
+
+
+  method CUSTOMERZSTRUCTU_CREATE_ENTITY.
+  RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
+    EXPORTING
+      textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
+      method = 'CUSTOMERZSTRUCTU_CREATE_ENTITY'.
+  endmethod.
+
+
+  method CUSTOMERZSTRUCTU_DELETE_ENTITY.
+  RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
+    EXPORTING
+      textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
+      method = 'CUSTOMERZSTRUCTU_DELETE_ENTITY'.
+  endmethod.
+
+
+  method CUSTOMERZSTRUCTU_GET_ENTITY.
+  RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
+    EXPORTING
+      textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
+      method = 'CUSTOMERZSTRUCTU_GET_ENTITY'.
+  endmethod.
+
+
+  method CUSTOMERZSTRUCTU_GET_ENTITYSET.
+  RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
+    EXPORTING
+      textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
+      method = 'CUSTOMERZSTRUCTU_GET_ENTITYSET'.
+  endmethod.
+
+
+  method CUSTOMERZSTRUCTU_UPDATE_ENTITY.
+  RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
+    EXPORTING
+      textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
+      method = 'CUSTOMERZSTRUCTU_UPDATE_ENTITY'.
+  endmethod.
+
+
+  method CUSTOMERZTABLESE_CREATE_ENTITY.
+  RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
+    EXPORTING
+      textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
+      method = 'CUSTOMERZTABLESE_CREATE_ENTITY'.
+  endmethod.
+
+
+  method CUSTOMERZTABLESE_DELETE_ENTITY.
+  RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
+    EXPORTING
+      textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
+      method = 'CUSTOMERZTABLESE_DELETE_ENTITY'.
+  endmethod.
+
+
+  method CUSTOMERZTABLESE_GET_ENTITY.
+  RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
+    EXPORTING
+      textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
+      method = 'CUSTOMERZTABLESE_GET_ENTITY'.
+  endmethod.
+
+
+  method CUSTOMERZTABLESE_GET_ENTITYSET.
+  RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
+    EXPORTING
+      textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
+      method = 'CUSTOMERZTABLESE_GET_ENTITYSET'.
+  endmethod.
+
+
+  method CUSTOMERZTABLESE_UPDATE_ENTITY.
+  RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
+    EXPORTING
+      textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
+      method = 'CUSTOMERZTABLESE_UPDATE_ENTITY'.
   endmethod.
 ENDCLASS.
