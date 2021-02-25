@@ -168,18 +168,7 @@
     "abapdoc": false,
     "check_ddic": true,
     "check_include": true,
-    "allowed_object_types": {
-      "allowed": [
-        "PROG",
-        "CLAS",
-        "INTF",
-        "FUGR",
-        "DEVC",
-        "TRAN",
-        "W3MI",
-        "TABL"
-      ]
-    },
+    "allowed_object_types": false,
     "ambiguous_statement": true,
     "avoid_use": {
       "define": true,
