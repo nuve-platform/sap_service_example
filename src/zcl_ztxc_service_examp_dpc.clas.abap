@@ -1252,6 +1252,7 @@ lo_logger = /iwbep/if_mgw_conv_srv_runtime~get_logger( ).
 
 
   method CUSTOMERZTABLESE_GET_ENTITYSET.
+  "TODO
   RAISE EXCEPTION TYPE /iwbep/cx_mgw_not_impl_exc
     EXPORTING
       textid = /iwbep/cx_mgw_not_impl_exc=>method_not_implemented
